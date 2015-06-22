@@ -10,7 +10,8 @@ comments: true
     n this post, i will be guide you how to clone and install that framework on your machine.
 </p>
 
-## Requirements
+REQUIREMENTS
+----
 * Apache >= 2.0
 * Enable Apache mod_rewrite
 * PhalconPHP Framwork >=1.3.4
@@ -19,14 +20,17 @@ comments: true
 * [Sphinx Search](http://sphinxsearch.com/) (Optional)
 * libODBC x64 install CentOS: yum install unixODBC unixODBC-devel postgresql-libs (dependencies of SphinxSE)
 
-## Supported Image Libraries
+Supported Image Libraries
+----
 * GD Library (>=2.0)
 * Imagick PHP extension (>=6.5.7)
 
-## Supported Crypt Libraries (using for encrypt cookie)
+Supported Crypt Libraries (using for encrypt cookie)
+----
 * PHP-mcrypt Extension
 
-### CONFIGURE WEBSITE
+CONFIGURE WEBSITE
+----
 On first clone this source from github, open file ***/conf/global.php*** and change MySQL connect information.
 
 {% highlight php startinline=true %}
@@ -54,7 +58,8 @@ date_default_timezone_set('Asia/Bangkok');
 ini_set('session.cookie_domain', '.newpj.site');
 {% endhighlight %}
 
-### START THE INSTALLATION
+START THE INSTALLATION
+----
 Open a browser and type the path to the website that you have configured in the ***/conf/global.php*** file above. For example, enter path ***http://newpj.site*** and you will be see button ***Install*** on home page then click it.
 
 <figure>
