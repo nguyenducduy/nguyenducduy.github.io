@@ -3,8 +3,8 @@ description: Fast development web apps with CRUD code generator
 
 url: http://phalconjumpstart.com
 baseurl: ""
-paginate_path: "blog/page:num/"
-permalink: blog/:title/
+paginate_path: "/page:num/"
+permalink: /:year/:month/:day/:title/
 
 markdown: redcarpet
 highlighter: pygments
@@ -24,4 +24,4 @@ social:
    # facebook: brianmaierjr
    email: nguyenducduy.it@gmail.com
 
-google_analytics: "UA-58263416-1"
+google_analytics: "UA-55911554-1"
