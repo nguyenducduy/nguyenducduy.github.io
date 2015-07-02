@@ -13,10 +13,10 @@ paginate: 10
 navigation:
  - title: Home
    url: /index.html
- - title: About
-   url: /about.html
- - title: Contact
-   url: /contact.html
+ - title: Phalcon
+   url: /phalcon.html
+ - title: React
+   url: /react.html
 
 social:
    github: nguyenducduy

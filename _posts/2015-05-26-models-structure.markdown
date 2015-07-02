@@ -1,13 +1,13 @@
 ---
 layout: post
-title:  "Models Structure"
+title:  "Phalcon Jumpstart - Models Structure"
 date:   2015-05-26
+description: Model of Framework class undertake major processing operations as well as the functionality of the website. Model is the only class in the MVC 3 class direct access to the database to ensure the maintenance and expansion of the MVC pattern.
 comments: true
 ---
 
 <p class="intro">
-    <span class="dropcap">M</span>
-    odel of Framework class undertake major processing operations as well as the functionality of the website. Model is the only class in the MVC 3 class direct access to the database to ensure the maintenance and expansion of the MVC pattern.
+    <span class="dropcap">M</span>odel of Framework class undertake major processing operations as well as the functionality of the website. Model is the only class in the MVC 3 class direct access to the database to ensure the maintenance and expansion of the MVC pattern.
 </p>
 
 Because it is built on object-oriented model should each be designed as one PHP class and placed in the folder ***/models/***. The Model can gather in groups for easier use Model, inheritance and maintenance. In Admin Panel Code Generator function, helps you from a table in the database, generate a model class with methods and attributes essential to be able to use right model for your Web application.

@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Install Phalcon Jumpstart"
+title:  "Phalcon Jumpstart - Installation"
 date:   2015-05-26
+description: In this post, i will be guide you how to clone and install that framework on your machine.
 comments: true
 ---
 
@@ -60,10 +61,10 @@ ini_set('session.cookie_domain', '.newpj.site');
 
 START THE INSTALLATION
 ----
-Open a browser and type the path to the website that you have configured in the ***/conf/global.php*** file above. For example, enter path ***http://newpj.site*** and you will be see button ***Install*** on home page then click it.
+Open a browser and type the path to the website that you have configured in the ***/conf/global.php*** file above. For example, enter path ***http://yoursite*** and you will be see button ***Install*** on home page then click it.
 
 <figure>
-    <img src="{{ '/uploads/pj/phalcon-jumpstart-installation.png' | prepend: site.baseurl }}" alt="">
+    <img src="{{ '/uploads/pj/phalcon-jumpstart-installation.png' | prepend: site.baseurl }}" alt="Phalcon Jumpstart installation page">
     <figcaption>Fig1. - Phalcon Jumpstart installation page.</figcaption>
 </figure>
 

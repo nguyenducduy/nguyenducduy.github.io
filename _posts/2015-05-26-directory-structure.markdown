@@ -1,14 +1,10 @@
 ---
 layout: post
-title:  "Directory Structure"
+title:  "Phalcon Jumpstart - Directory Structure"
 date:   2015-05-26
+description: Introduction to directory structure in Phalcon Jumpstart Framework.
 comments: true
 ---
-
-<p class="intro">
-    <span class="dropcap">D</span>
-    irectory structure.
-</p>
 
 ***/models/*** - all of model classes in the Framework MVC pattern.
 

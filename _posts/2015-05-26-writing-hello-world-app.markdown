@@ -1,7 +1,8 @@
 ---
 layout: post
-title:  "Writing Helloworld app"
+title:  "Phalcon Jumpstart - Writing Helloworld app"
 date:   2015-05-26
+description: This page will guide you how to write application for the Front End Website (Common module).
 comments: true
 ---
 
@@ -121,4 +122,4 @@ return [
 
 If you already logged in as Administrator, you must add permissions for ***ROLE_ADMIN*** be able to access the helloworld app.
 
-Now, you can access the functions you've written in the path ***http://localhost/phalcon-jumpstart/helloworld***
+Now, you can access the functions you've written in the path ***http://yoursite/helloworld***
