@@ -1,0 +1,60 @@
+---
+layout: post
+title:  "Phalcon Jumpstart - PHP Console"
+date:   2015-05-26
+description: CLI applications are executed from the command line. They are useful to create cron jobs, scripts, command utilities and more.
+comments: true
+---
+
+<p class="intro">
+    <span class="dropcap">C</span>
+    LI applications are executed from the command line. They are useful to create cron jobs, scripts, command utilities and more.
+</p>
+
+CLI applications are executed from the command line. They are useful to create cron jobs, scripts, command utilities and more.
+
+### Structure
+A minimal structure of a CLI application will look like this:
+
+* cli/app/tasks/MainTask.php
+* cli/cli.php <– main bootstrap file
+
+This console app used same config file of web app located at ***/conf/global.php***
+
+### Tasks
+Tasks work similar to controllers. Any CLI application needs at least a mainTask and a mainAction and every task needs to have a mainAction which will run if no action is given explicitly.
+
+For example calling a task in console app, you need declare like below:
+
+{% highlight php startinline=true %}
+<?php
+
+use Phalcon\CLI\Task as PhTask;
+
+class MainTask extends PhTask
+{
+    public function mainAction()
+    {
+
+    }
+
+    public function testAction()
+    {
+        echo CURRENT_TASK . PHP_EOL;
+        echo CURRENT_ACTION . PHP_EOL;
+    }
+}
+{% endhighlight %}
+
+Then call in Terminal:
+
+```
+php cli/cli.php main test
+```
+
+That will print to terminal 2 string
+
+```
+main
+test
+```

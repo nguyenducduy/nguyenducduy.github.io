@@ -1,0 +1,32 @@
+---
+layout: post
+title:  "Phalcon Jumpstart - DB Logger"
+date:   2015-05-26
+description: Phalcon\Logger is a component whose purpose is to provide logging services for applications. It offers logging to different backends using different adapters. It also offers transaction logging, configuration options, different formats and filters. You can use the Phalcon\Logger for every logging need your application has, from debugging processes to tracing application flow.
+comments: true
+---
+
+<p class="intro">
+    <span class="dropcap">P</span>
+    halcon\Logger is a component whose purpose is to provide logging services for applications. It offers logging to different backends using different adapters. It also offers transaction logging, configuration options, different formats and filters. You can use the Phalcon\Logger for every logging need your application has, from debugging processes to tracing application flow.
+</p>
+
+Phalcon\Logger is a component whose purpose is to provide logging services for applications. It offers logging to different backends using different adapters. It also offers transaction logging, configuration options, different formats and filters. You can use the Phalcon\Logger for every logging need your application has, from debugging processes to tracing application flow.
+
+In this framework, i used extra Phalcon Logger Incubator library for store log information in database.
+More at [Phalcon Incubator Library](https://github.com/phalcon/incubator).
+
+You need simply call to store log information, example i used in ***CodegeneratorController.php*** file when user generate CRUD structure or ***LoginController.php*** when user login to admin area.
+
+{% highlight php startinline=true %}
+$this->logger->name = 'LOGIN';
+$this->logger->info('Information u want to store');
+{% endhighlight %}
+
+Go to http://yoursite/admin/logs to view log
+
+<figure>
+    <img src="{{ '/uploads/pj/db-log-tracking.png' | prepend: site.baseurl }}" alt="Database Log Tracking">
+    <figcaption>Fig1. - Database Log Tracking.</figcaption>
+</figure>
+
