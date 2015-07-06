@@ -1,6 +1,11 @@
-body {
+body p, body ul{
+    font-family: Arial;
   font-size: 110%;
 }
 code, kbd, pre, samp {
   font-size: 1rem;
+}
+.posts li a {
+  text-decoration: none;
+  font-weight: 500;
 }

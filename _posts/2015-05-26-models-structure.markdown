@@ -10,6 +10,8 @@ comments: true
     <span class="dropcap">M</span>odel of Framework class undertake major processing operations as well as the functionality of the website. Model is the only class in the MVC 3 class direct access to the database to ensure the maintenance and expansion of the MVC pattern.
 </p>
 
+<iframe width="420" height="315" src="https://redirector.googlevideo.com/videoplayback?requiressl=yes&id=91820434e75e8c9e&itag=22&source=picasa&cmo=secure_transport=yes&ip=0.0.0.0&ipbits=0&expire=1438525867&sparams=requiressl,id,itag,source,ip,ipbits,expire&signature=88FB3CBE074111043CE4248A33F9677F409F072D.B7191228E27E8E4438809C93FE939390BF399B42&key=lh1" frameborder="0" allowfullscreen></iframe>
+
 Because it is built on object-oriented model should each be designed as one PHP class and placed in the folder ***/models/***. The Model can gather in groups for easier use Model, inheritance and maintenance. In Admin Panel Code Generator function, helps you from a table in the database, generate a model class with methods and attributes essential to be able to use right model for your Web application.
 
 Phalcon Jumpstart used [Phalcon Model Annotations](http://docs.phalconphp.com/en/latest/reference/annotations.html) to mapping model class to table in MySQL database.
