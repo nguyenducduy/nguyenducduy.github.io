@@ -4,14 +4,16 @@ title: "Tại sao lại muốn trở thành Fullstack Developer?"
 description: 
 headline: 
 modified: 2023-05-06
-category: developer
-tags: [personal]
+category: Personal
+tags: [fullstack, developer]
 imagefeature: 
 mathjax: 
 chart: 
 comments: true
 featured: true
 ---
+
+
 
 Well, I guess it's quite obvious that I really enjoy working with Jekyll — with good reasons — so let me just briefly suggest some of the benefits of using a static site generator in favor of a heavy dynamic, database driven content management system.
 
