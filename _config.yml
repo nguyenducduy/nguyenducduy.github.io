@@ -35,19 +35,19 @@ bing_verify:
 links:
   - title: Trang chủ
     url: /
-  #   external: false
-  #   icon: home
-  # - title: Bài viết
-  #   url: /featured
-  # - title: Chủ đề
-  #   url: /categories
+    external: false
+    icon: home
+  - title: Bài viết
+    url: /featured
+  - title: Chủ đề
+    url: /categories
   - title: Về tui
     url: /about
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Asia/Bangkok
 future:      true
-highlighter: pygments
+highlighter: rouge
 markdown:    kramdown
 paginate:    30
 paginate_path: "page:num"

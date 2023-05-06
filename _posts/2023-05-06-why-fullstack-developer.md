@@ -1,11 +1,11 @@
 ---
 layout: post
-title: "Tại sao lại muốn trở thành FullStack Developer?"
+title: "Tại sao lại muốn trở thành Fullstack Developer?"
 description: 
 headline: 
 modified: 2023-05-06
 category: developer
-tags: [fullstack, developer]
+tags: [personal]
 imagefeature: 
 mathjax: 
 chart: 
