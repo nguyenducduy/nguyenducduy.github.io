@@ -47,9 +47,9 @@ Và cái gì tới rồi cũng sẽ tới, thầy tui có lối đi riêng nên 
 	<a href="{{ site.url }}/images/about/teamcrop/all_members.jpg"><img src="{{ site.url }}/images/about/teamcrop/all_members.jpg"></a>
 </figure>
 <figure class="third">
-	<a href="{{ site.url }}/images/about/teamcrop/IMG_0128.jpg"><img src="{{ site.url }}/images/about/teamcrop/IMG_0128.jpg"></a>
-	<a href="{{ site.url }}/images/about/teamcrop/IMG_0129.jpg"><img src="{{ site.url }}/images/about/teamcrop/IMG_0129.jpg"></a>
-	<a href="{{ site.url }}/images/about/teamcrop/IMG_0130.jpg"><img src="{{ site.url }}/images/about/teamcrop/IMG_0130.jpg"></a>
+	<a href="{{ site.url }}/images/about/teamcrop/IMG_0128.JPG"><img src="{{ site.url }}/images/about/teamcrop/IMG_0128.JPG"></a>
+	<a href="{{ site.url }}/images/about/teamcrop/IMG_0129.JPG"><img src="{{ site.url }}/images/about/teamcrop/IMG_0129.JPG"></a>
+	<a href="{{ site.url }}/images/about/teamcrop/IMG_0130.JPG"><img src="{{ site.url }}/images/about/teamcrop/IMG_0130.JPG"></a>
 	<figcaption>Khởi nghiệp cùng thầy tại Spiral (teamcrop.com) năm 2015. Vất vả nhưng được cái nó vui.</figcaption>
 </figure>
 
@@ -60,19 +60,19 @@ Lúc này setup server xong thì ngồi chơi cưỡi ngựa xem hoa, rảnh r�
 Năm 2016, quản trị server hoài cũng nhàn nên tui quyết định bay lượn ở vùng trời khác, tui gia nhập [5giay.vn](https://www.5giay.vn/) lúc đó là sàn rao vặt thời kỳ đầu dưới dạng forum với lượng truy cập rất cao (bây giờ thì sụp rồi), muốn nâng cấp từ vBulltetin lên Xenforo và build 1 trang rao vặt đúng nghĩa. Project đã hoàn thành nhưng vì nhiều lý do không thể duy trì và phát triển được (không có nhân lực, thuê sinh viên làm lại nên bây giờ thành cái web xấu xí nhất quả đất). Tui đành chia tay 5giay, tui đi phỏng vấn và đậu 1 số cty như Mainspring (hiện sở hữu bởi ByteDance - Cty mẹ của ứng dụng TikTok), Tiki.vn, KynaForKid, Siêu Việt Group (Chủ sở hữu 1 số website tìm việc), HDWebsoft, ... nhưng phong cách làm việc và dự án ở đây có lẽ không phù hợp với tui và cuối cùng tui tìm thấy [OLLI](https://olli.vn/): với ý tưởng điên rồ và táo bạo thời điểm đó, tui gia nhập và tự nâng cấp bản thân mình cho đến bây giờ.
 
 <figure class="third">
-	<a href="{{ site.url }}/images/about/olli/IMG_0008.jpg"><img src="{{ site.url }}/images/about/olli/IMG_0008.jpg"></a>
+	<a href="{{ site.url }}/images/about/olli/IMG_0008.JPG"><img src="{{ site.url }}/images/about/olli/IMG_0008.JPG"></a>
 	<a href="{{ site.url }}/images/about/olli/IMG_0109.jpg"><img src="{{ site.url }}/images/about/olli/IMG_0109.jpg"></a>
-	<a href="{{ site.url }}/images/about/olli/IMG_0020.jpg"><img src="{{ site.url }}/images/about/olli/IMG_0020.jpg"></a>
+	<a href="{{ site.url }}/images/about/olli/IMG_0020.JPG"><img src="{{ site.url }}/images/about/olli/IMG_0020.JPG"></a>
 	<figcaption>OLLI - Những thành viên thuở sơ khai, làm việc tại Lutaco Tower</figcaption>
 </figure>
 <figure class="third">
-	<a href="{{ site.url }}/images/about/olli/IMG_4651.jpg"><img src="{{ site.url }}/images/about/olli/IMG_4651.jpg"></a>
-	<a href="{{ site.url }}/images/about/olli/IMG_4949.jpg"><img src="{{ site.url }}/images/about/olli/IMG_4949.jpg"></a>
-	<a href="{{ site.url }}/images/about/olli/IMG_4819.jpg"><img src="{{ site.url }}/images/about/olli/IMG_4819.jpg"></a>
+	<a href="{{ site.url }}/images/about/olli/IMG_4651.JPG"><img src="{{ site.url }}/images/about/olli/IMG_4651.JPG"></a>
+	<a href="{{ site.url }}/images/about/olli/IMG_4949.JPG"><img src="{{ site.url }}/images/about/olli/IMG_4949.JPG"></a>
+	<a href="{{ site.url }}/images/about/olli/IMG_4819.JPG"><img src="{{ site.url }}/images/about/olli/IMG_4819.JPG"></a>
 	<figcaption>OLLI - CES ASIA Shanghai trip (Đi dự triển lãm công nghệ CES tại Thượng Hải, TQ. Tiện đi du lịch lun)</figcaption>
 </figure>
 <figure>
-	<a href="{{ site.url }}/images/about/olli/IMG_0120.jpg"><img src="{{ site.url }}/images/about/olli/IMG_0120.jpg"></a>
+	<a href="{{ site.url }}/images/about/olli/IMG_0120.JPG"><img src="{{ site.url }}/images/about/olli/IMG_0120.JPG"></a>
 	<figcaption>Vâng. Tui ngồi đây và tui có thể làm những gì tui thích. (Thực ra là tui ngồi đối diện sếp tui =.=", còn ảnh ngồi ngay chỗ tui đứng chụp) </figcaption>
 </figure>
 
