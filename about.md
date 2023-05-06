@@ -1,14 +1,14 @@
 ---
 layout: page
 permalink: /about/index.html
-title: Hossain Mohd Faysal
-tags: [Hossain, Mohd, Faysal, hmfaysal]
+title: I'm Duy
+tags: [Duy, Duy Nguyen, Nguyễn Đức Duy]
 imagefeature: fourseasons.jpg
 chart: true
 ---
 <figure>
-  <img src="{{ site.url }}/images/hossain-faysal.jpg" alt="Hossain Mohammad Faysal">
-  <figcaption>Hossain Mohammad Faysal</figcaption>
+  <img src="{{ site.url }}/images/nguyen-duc-duy.jpg" alt="Nguyễn Đức Duy" width="30%">
+  <figcaption>Nguyễn Đức Duy -  Coder</figcaption>
 </figure>
 
 {% assign total_words = 0 %}
@@ -27,72 +27,57 @@ chart: true
 {% endfor %}
 
 
-My name is **Hossain Mohd. Faysal**, and this is my personal blog. It currently has {{ site.posts | size }} posts in {{ site.categories | size }} categories which combinedly have {{ total_words }} words, which will take an average reader ({{ site.wpm }} WPM) approximately <span class="time">{{ total_readtime }}</span> minutes to read. {% if featuredcount != 0 %}There are <a href="{{ site.url }}/featured">{{ featuredcount }} featured posts</a>, you should definitely check those out.{% endif %} The most recent post is {% for post in site.posts limit:1 %}{% if post.description %}<a href="{{ site.url }}{{ post.url }}" title="{{ post.description }}">"{{ post.title }}"</a>{% else %}<a href="{{ site.url }}{{ post.url }}" title="{{ post.description }}" title="Read more about {{ post.title }}">"{{ post.title }}"</a>{% endif %}{% endfor %} which was published on {% for post in site.posts limit:1 %}{% assign modifiedtime = post.modified | date: "%Y%m%d" %}{% assign posttime = post.date | date: "%Y%m%d" %}<time datetime="{{ post.date | date_to_xmlschema }}" class="post-time">{{ post.date | date: "%d %b %Y" }}</time>{% if post.modified %}{% if modifiedtime != posttime %} and last modified on <time datetime="{{ post.modified | date: "%Y-%m-%d" }}" itemprop="dateModified">{{ post.modified | date: "%d %b %Y" }}</time>{% endif %}{% endif %}{% endfor %}. The last commit was on {{ site.time | date: "%A, %d %b %Y" }} at {{ site.time | date: "%I:%M %p" }} [UTC](http://en.wikipedia.org/wiki/Coordinated_Universal_Time "Temps Universel Coordonné").
+Tui là Duy, tui làm blog này để chia sẻ những kinh nghiệm cũng như những kiến thức hay ho về công nghệ lập trình web. Tui hồi mới bắt đầu đi làm tới giờ cũng đã hơn 10 năm (2014-2023) tính tới thời điểm tui bắt đầu viết blog này. Nếu bạn đang theo dõi tui thì chắc chắn bạn đang muốn trở thành một Fullstack Developer, nghĩa là một người lập trình viên có thể code nhiều mảng khác nhau của một ứng dụng, và chúc mừng bạn, bạn đã tìm được người có thể sẵn sàng hỗ trợ bạn, một người đồng hành cùng bạn trên con đường lập trình đầy thú vị này nha.
 
-I am an PhD candidate in *ESE* at the [SEAS](http://www.seas.upenn.edu/) at **UPENN**. I am licensed as a Professional Engineer (P.E) to practice in the states of Texas, Massachusetts and California. I double majored in EECS and Mathematics during my undergraduate life at [MIT](http://www.mit.edu/), and currently focusing on Electrical Engineering for my post-graduate studies.
+Khởi điểm của tui cũng như bao người khác, thậm chí không bằng những bạn bây giờ, cũng đi học chuyên ngành công nghệ thông tin tại [NIIT](https://www.niit.com/vietnam/), tốt nghiệp hệ Cao Đẳng thời bấy giờ thì cũng tạm được, học được 1 chút kiến thức những công nghệ Microsoft như VB, ASP, Excel, Access, MSSQL, ... nhưng cơ bản là không có hứng thú lắm và quyết định học thêm ngôn ngữ lập trình [PHP](https://www.php.net/) thì thấy là khá "dính" với nó. Quyết định tầm sư học đạo với thầy [Võ Duy Tuấn](https://vn.linkedin.com/in/voduytuan) và cùng thầy đi chinh chiến tại [Điện máy Xanh](https://www.dienmayxanh.com/), khởi đầu cho chuỗi ngày ăn dằm nằm dề với code.
 
-*[ESE]: Electrical and Systems Engineering
-*[SEAS]: School of Engineering and Applied Science
-*[MIT]: Massachusetts Institute of Technology
-*[EECS]: Electrical and Computer Engineering
-*[UPENN]: University of Pennsylvania
-
-<figure>
-	<img src="{{ site.url }}/images/Hossain-Mohd-Faysal.jpg" alt="Hossain Mohammad Faysal">
-	<figcaption>At Bates Linear Accelerator Center</figcaption>
-</figure>
-
-I was born and brought up in Doha. Yes, its a desert peninsula, yes we have camels and falcons and all the other Middle Eastern traits/stereotypes you can think of.
-
-<figure class="third">
-	<a href="{{ site.url }}/images/about/1.jpg"><img src="{{ site.url }}/images/about/1-001.jpg"></a>
-	<a href="{{ site.url }}/images/about/2.jpg"><img src="{{ site.url }}/images/about/2-001.jpg"></a>
-	<a href="{{ site.url }}/images/about/3.jpg"><img src="{{ site.url }}/images/about/3-001.jpg"></a>
-</figure>
 <figure class="half">
-	<a href="{{ site.url }}/images/about/4.jpg"><img src="{{ site.url }}/images/about/4-001.jpg"></a>
-	<a href="{{ site.url }}/images/about/5.jpg"><img src="{{ site.url }}/images/about/5-001.jpg"></a>
+	<a href="{{ site.url }}/images/about/dienmayxanh/4_members.jpg"><img src="{{ site.url }}/images/about/dienmayxanh/4_members.jpg"></a>
+	<a href="{{ site.url }}/images/about/dienmayxanh/all_members.jpg"><img src="{{ site.url }}/images/about/dienmayxanh/all_members.jpg"></a>
+	<figcaption>Chinh chiến tại dienmay.com năm 2014 (Bây giờ là dienmayxanh.com)</figcaption>
+</figure>
+
+
+Tui làm việc tại [Điện máy Xanh](https://www.dienmayxanh.com/) với role PHP-DevOps, lúc này thì chẳng biết role này là gì, không hiểu tại sao học code PHP mà vô ngồi bắt làm việc với server Linux, rất may là được anh Thế Anh (SysAdmin của [TGDĐ](https://www.thegioididong.com/)) hướng dẫn và chỉ dạy nhiệt tình nên cũng dần thẩm thấu được 1 chút kiến thức về quản trị server Linux. Công việc hằng ngày lúc đó chủ yếu là đọc sách và theo dõi, tối ưu hệ thống xoay quanh những thứ như caching và load balancing.
+
+Và cái gì tới rồi cũng sẽ tới, thầy tui có lối đi riêng nên đành giã từ [Điện máy Xanh](https://www.dienmayxanh.com/), khởi nghiệp với [Teamcrop](https://www.teamcrop.com/) - Nền tảng quản lý chuỗi bán lẻ trên web. Lúc này thì càng áp lực hơn vì phải tự setup server vật lý, rồi vác nó đặt lên VDC Datacenter, thiết lập VPN, CI/CD Jenkins, ... không có ai cứu cánh, phải tự lực cánh sinh nhưng cũng rất là thú vị. Khởi nghiệp lun là 1 thứ gì đó vô cùng hấp dẫn và chông gai.
+
+<figure class="half">
+	<a href="{{ site.url }}/images/about/teamcrop/working_together.png"><img src="{{ site.url }}/images/about/teamcrop/working_together.png"></a>
+	<a href="{{ site.url }}/images/about/teamcrop/all_members.jpg"><img src="{{ site.url }}/images/about/teamcrop/all_members.jpg"></a>
 </figure>
 <figure class="third">
-	<a href="{{ site.url }}/images/about/6.jpg"><img src="{{ site.url }}/images/about/6-001.jpg"></a>
-	<a href="{{ site.url }}/images/about/7.jpg"><img src="{{ site.url }}/images/about/7-001.jpg"></a>
-	<a href="{{ site.url }}/images/about/8.jpg"><img src="{{ site.url }}/images/about/8-001.jpg"></a>
-	<figcaption>Doha at its full glory.</figcaption>
+	<a href="{{ site.url }}/images/about/teamcrop/IMG_0128.jpg"><img src="{{ site.url }}/images/about/teamcrop/IMG_0128.jpg"></a>
+	<a href="{{ site.url }}/images/about/teamcrop/IMG_0129.jpg"><img src="{{ site.url }}/images/about/teamcrop/IMG_0129.jpg"></a>
+	<a href="{{ site.url }}/images/about/teamcrop/IMG_0130.jpg"><img src="{{ site.url }}/images/about/teamcrop/IMG_0130.jpg"></a>
+	<figcaption>Khởi nghiệp cùng thầy tại Spiral (teamcrop.com) năm 2015. Vất vả nhưng được cái nó vui.</figcaption>
 </figure>
 
-At some point in the not-terribly-distant future, I hope to found a self-sustaining collective of clever people, for fun, profit(?), and the promotion of human life in the universe. This might wind up in Qatar, Bangladesh, Scandinavia, the Massachusetts Bay Area, the SF Bay Area, Japan, Germany, or the dustbin of overly idealistic plans. (Yes, I have a special bin for overly idealistic plans. In my district they can't be recycled with residential mixed paper.) The most challenging aspect of this concept is to curtail unproductive competition with other people who will inevitably have the same idea. (Some sort of cooperative federation...) I'm presently looking for people who might be interested in being a part of such an organization.
 
-Anyways, for now I'm just working toward changing the face of Electrical Engineering forever. Not that I necessarily expect to succeed, but it's something to strive for, and it's a fun problem to work on.
-
-
-Entrepreneur  
-Designer  
-***Engineer***  
-Inventor  
-
-I
-make
-stuff.
+Lúc này setup server xong thì ngồi chơi cưỡi ngựa xem hoa, rảnh rỗi nhớ code nên cũng tập tành ngồi viết 1 cái starter-kit dựa trên 1 framework PHP mới ra lúc bấy giờ là [Phalcon (C-extension)](https://phalcon.io/en-us) với ưu điểm là siêu nhanh và ngốn ít resource nhất. Bây giờ thì đã cũ rồi, nếu các bạn muốn vẫn có thể clone về để tham khảo nha [Phalcon Jumpstart](https://github.com/nguyenducduy/phalcon-jumpstart) & [PHP framework starter](https://github.com/nguyenducduy/php-framework-starter).
 
 
-*Beautiful, practical, meaningful stuff.*
+Năm 2016, quản trị server hoài cũng nhàn nên tui quyết định bay lượn ở vùng trời khác, tui gia nhập [5giay.vn](https://www.5giay.vn/) lúc đó là sàn rao vặt thời kỳ đầu dưới dạng forum với lượng truy cập rất cao (bây giờ thì sụp rồi), muốn nâng cấp từ vBulltetin lên Xenforo và build 1 trang rao vặt đúng nghĩa. Project đã hoàn thành nhưng vì nhiều lý do không thể duy trì và phát triển được (không có nhân lực, thuê sinh viên làm lại nên bây giờ thành cái web xấu xí nhất quả đất). Tui đành chia tay 5giay, tui đi phỏng vấn và đậu 1 số cty như Mainspring (hiện sở hữu bởi ByteDance - Cty mẹ của ứng dụng TikTok), Tiki.vn, KynaForKid, Siêu Việt Group (Chủ sở hữu 1 số website tìm việc), HDWebsoft, ... nhưng phong cách làm việc và dự án ở đây có lẽ không phù hợp với tui và cuối cùng tui tìm thấy [OLLI](https://olli.vn/): với ý tưởng điên rồ và táo bạo thời điểm đó, tui gia nhập và tự nâng cấp bản thân mình cho đến bây giờ.
 
+<figure class="third">
+	<a href="{{ site.url }}/images/about/olli/IMG_0008.jpg"><img src="{{ site.url }}/images/about/olli/IMG_0008.jpg"></a>
+	<a href="{{ site.url }}/images/about/olli/IMG_0109.jpg"><img src="{{ site.url }}/images/about/olli/IMG_0109.jpg"></a>
+	<a href="{{ site.url }}/images/about/olli/IMG_0020.jpg"><img src="{{ site.url }}/images/about/olli/IMG_0020.jpg"></a>
+	<figcaption>OLLI - Những thành viên thuở sơ khai, làm việc tại Lutaco Tower</figcaption>
+</figure>
+<figure class="third">
+	<a href="{{ site.url }}/images/about/olli/IMG_4651.jpg"><img src="{{ site.url }}/images/about/olli/IMG_4651.jpg"></a>
+	<a href="{{ site.url }}/images/about/olli/IMG_4949.jpg"><img src="{{ site.url }}/images/about/olli/IMG_4949.jpg"></a>
+	<a href="{{ site.url }}/images/about/olli/IMG_4819.jpg"><img src="{{ site.url }}/images/about/olli/IMG_4819.jpg"></a>
+	<figcaption>OLLI - CES ASIA Shanghai trip (Đi dự triển lãm công nghệ CES tại Thượng Hải, TQ. Tiện đi du lịch lun)</figcaption>
+</figure>
+<figure>
+	<a href="{{ site.url }}/images/about/olli/IMG_0120.jpg"><img src="{{ site.url }}/images/about/olli/IMG_0120.jpg"></a>
+	<figcaption>Vâng. Tui ngồi đây và tui có thể làm những gì tui thích. (Thực ra là tui ngồi đối diện sếp tui =.=", còn ảnh ngồi ngay chỗ tui đứng chụp) </figcaption>
+</figure>
 
-I make what I love.
+Đến với [OLLI](https://olli.vn/), như một duyên số nào đó đã gắn chặt tui ở đây, vì ở đây tui cảm thấy thoải mái, cảm thấy được quan tâm và được làm 1 dự án rất là hay ho. Được dẫn dắt bởi 2 người trẻ nhưng có hoài bão lớn, sứ mệnh mang lại 1 sản phẩm tốt và hữu ích dành cho người Việt, đó là [Loa thông minh Maika](https://olli.vn/products/loa-thong-minh-maika). Công việc của tui chủ yếu ở đây là quản lý về kỹ thuật những vấn đề liên quan đến mảng nội dung của loa Maika, nói thì ngắn gọn vậy thôi chứ xoay quanh nó rất nhiều kỹ thuật và vấn đề phát sinh mà tui sẽ chia sẻ trong blog này.
 
-*I love what I do.*
+Các bạn theo dõi nhé.
 
-
-But over the years, I noticed that somehow, along the way, software designed to help us be creative, actually made us less creative. That's because we believe our best ideas emerge when we use pencils and paper.
-So I set out to build tools that work the way I do.
-
-
-Tools for the creative space — the 53 centimeters that magically link head, heart, and hand. Tools as simple as pencil and paper. Tools so essential, I  really can't imagine work without them.
-
-
-For
-the makers,  
-the creators,  
-the discoverers,  
-the original thinkers,  
-***This is the space to create.***
+Thân, Duy coder.
