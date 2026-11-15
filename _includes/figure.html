@@ -1,0 +1,5 @@
+{%- comment -%}
+Post figure. Params: src (path under images/), alt, caption, class ("small" = max 34rem). One line of output, safe inside Markdown.
+{%- endcomment -%}
+{%- if include.class contains 'small' -%}{%- assign fsizes = '(min-width: 38rem) 34rem, 100vw' -%}{%- else -%}{%- assign fsizes = '(min-width: 44rem) 40rem, 100vw' -%}{%- endif -%}
+<figure{% if include.class %} class="{{ include.class }}"{% endif %}><a href="{{ site.url }}/images/{{ include.src }}">{% include picture.html src=include.src alt=include.alt sizes=fsizes %}</a>{% if include.caption %}<figcaption>{{ include.caption }}</figcaption>{% endif %}</figure>

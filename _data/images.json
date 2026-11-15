@@ -1,0 +1,316 @@
+{
+ "fullstack/bigpicture.jpg": {
+  "w": 1184,
+  "h": 864,
+  "widths": [
+   400,
+   800,
+   1184
+  ]
+ },
+ "fullstack/cover.jpg": {
+  "w": 1344,
+  "h": 768,
+  "widths": [
+   400,
+   800,
+   1200,
+   1344
+  ]
+ },
+ "fullstack/ownproduct.jpg": {
+  "w": 1184,
+  "h": 864,
+  "widths": [
+   400,
+   800,
+   1184
+  ]
+ },
+ "fullstack/startup.jpg": {
+  "w": 1184,
+  "h": 864,
+  "widths": [
+   400,
+   800,
+   1184
+  ]
+ },
+ "agentic/cover.jpg": {
+  "w": 1344,
+  "h": 768,
+  "widths": [
+   400,
+   800,
+   1200,
+   1344
+  ]
+ },
+ "agentic/experience.jpg": {
+  "w": 1184,
+  "h": 864,
+  "widths": [
+   400,
+   800,
+   1184
+  ]
+ },
+ "agentic/fde.jpg": {
+  "w": 1184,
+  "h": 864,
+  "widths": [
+   400,
+   800,
+   1184
+  ]
+ },
+ "agentic/handsoff.jpg": {
+  "w": 1184,
+  "h": 864,
+  "widths": [
+   400,
+   800,
+   1184
+  ]
+ },
+ "agentic/lead.jpg": {
+  "w": 1184,
+  "h": 864,
+  "widths": [
+   400,
+   800,
+   1184
+  ]
+ },
+ "map3d/aiworld.jpg": {
+  "w": 1184,
+  "h": 864,
+  "widths": [
+   400,
+   800,
+   1184
+  ]
+ },
+ "map3d/blockout.jpg": {
+  "w": 1184,
+  "h": 864,
+  "widths": [
+   400,
+   800,
+   1184
+  ]
+ },
+ "map3d/concept.jpg": {
+  "w": 1000,
+  "h": 1000,
+  "widths": [
+   400,
+   800,
+   1000
+  ]
+ },
+ "map3d/cover.jpg": {
+  "w": 1344,
+  "h": 768,
+  "widths": [
+   400,
+   800,
+   1200,
+   1344
+  ]
+ },
+ "map3d/layers.jpg": {
+  "w": 1184,
+  "h": 864,
+  "widths": [
+   400,
+   800,
+   1184
+  ]
+ },
+ "map3d/tour-poster.jpg": {
+  "w": 1280,
+  "h": 720,
+  "widths": [
+   400,
+   800,
+   1200,
+   1280
+  ]
+ },
+ "about/dienmayxanh/4_members.jpg": {
+  "w": 1000,
+  "h": 664,
+  "widths": [
+   400,
+   800,
+   1000
+  ]
+ },
+ "about/dienmayxanh/all_members.jpg": {
+  "w": 960,
+  "h": 720,
+  "widths": [
+   400,
+   800,
+   960
+  ]
+ },
+ "about/olli/IMG_0008.JPG": {
+  "w": 1400,
+  "h": 1050,
+  "widths": [
+   400,
+   800,
+   1200,
+   1400
+  ]
+ },
+ "about/olli/IMG_0020.JPG": {
+  "w": 1400,
+  "h": 1050,
+  "widths": [
+   400,
+   800,
+   1200,
+   1400
+  ]
+ },
+ "about/olli/IMG_0109.jpg": {
+  "w": 1200,
+  "h": 900,
+  "widths": [
+   400,
+   800,
+   1200
+  ]
+ },
+ "about/olli/IMG_0120.JPG": {
+  "w": 2400,
+  "h": 765,
+  "widths": [
+   400,
+   800,
+   1200,
+   2400
+  ]
+ },
+ "about/olli/IMG_4651.JPG": {
+  "w": 1400,
+  "h": 1050,
+  "widths": [
+   400,
+   800,
+   1200,
+   1400
+  ]
+ },
+ "about/olli/IMG_4819.JPG": {
+  "w": 1400,
+  "h": 1050,
+  "widths": [
+   400,
+   800,
+   1200,
+   1400
+  ]
+ },
+ "about/olli/IMG_4949.JPG": {
+  "w": 1400,
+  "h": 1050,
+  "widths": [
+   400,
+   800,
+   1200,
+   1400
+  ]
+ },
+ "about/phalcon_jumpstart_preview.jpg": {
+  "w": 1425,
+  "h": 2916,
+  "widths": [
+   400,
+   800,
+   1200,
+   1425
+  ]
+ },
+ "about/teamcrop/IMG_0128.JPG": {
+  "w": 1400,
+  "h": 1050,
+  "widths": [
+   400,
+   800,
+   1200,
+   1400
+  ]
+ },
+ "about/teamcrop/IMG_0129.JPG": {
+  "w": 960,
+  "h": 720,
+  "widths": [
+   400,
+   800,
+   960
+  ]
+ },
+ "about/teamcrop/IMG_0130.JPG": {
+  "w": 960,
+  "h": 540,
+  "widths": [
+   400,
+   800,
+   960
+  ]
+ },
+ "about/teamcrop/all_members.jpg": {
+  "w": 960,
+  "h": 543,
+  "widths": [
+   400,
+   800,
+   960
+  ]
+ },
+ "about/teamcrop/my_master.jpg": {
+  "w": 543,
+  "h": 960,
+  "widths": [
+   400,
+   543
+  ]
+ },
+ "about/teamcrop/vdc_datacenter.jpg": {
+  "w": 543,
+  "h": 960,
+  "widths": [
+   400,
+   543
+  ]
+ },
+ "about/teamcrop/working_together.png": {
+  "w": 1024,
+  "h": 680,
+  "widths": [
+   400,
+   800,
+   1024
+  ]
+ },
+ "avatar.jpg": {
+  "w": 156,
+  "h": 160,
+  "widths": [
+   156
+  ]
+ },
+ "nguyen-duc-duy.jpg": {
+  "w": 1050,
+  "h": 1400,
+  "widths": [
+   400,
+   800,
+   1050
+  ]
+ }
+}

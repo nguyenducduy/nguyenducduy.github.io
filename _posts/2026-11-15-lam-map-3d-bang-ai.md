@@ -18,12 +18,9 @@ Dạo này mạng xã hội toàn video kiểu "gõ một câu, AI sinh ra cả 
 
 Thử một thời gian thì tui rút ra một chuyện: **AI giúp được nhiều lắm, nhưng không phải ở chỗ mọi người hay tưởng.** Bài này tui ghi lại cách tui đang làm, chỗ nào AI đỡ việc thật, chỗ nào vẫn phải tự tay.
 
-### Một cái map 3D gồm những gì
+## Một cái map 3D gồm những gì
 
-<figure class="small">
-	<a href="{{ site.url }}/images/map3d/layers.jpg"><img src="{{ site.url }}/images/map3d/layers.jpg" alt="Các lớp của một map 3D: địa hình, khối lắp ghép, cây cỏ rải theo luật, điểm nhấn"></a>
-	<figcaption>Map thật thường là nhiều lớp chồng lên nhau, mỗi lớp làm bằng một cách.</figcaption>
-</figure>
+{% include figure.html src="map3d/layers.jpg" alt="Các lớp của một map 3D: địa hình, khối lắp ghép, cây cỏ rải theo luật, điểm nhấn" caption="Map thật thường là nhiều lớp chồng lên nhau, mỗi lớp làm bằng một cách." class="small" %}
 
 Trước khi nói chuyện AI, phải hiểu map được dựng ra sao. Đại khái có mấy cách:
 
@@ -34,12 +31,9 @@ Trước khi nói chuyện AI, phải hiểu map được dựng ra sao. Đại 
 
 Game lớn như Horizon, Ghost of Tsushima hay Genshin đều trộn mấy cách này: địa hình làm nền, rải theo luật cho phần rộng, còn mấy điểm nhấn quan trọng thì người đặt tay.
 
-### AI "sinh cả thế giới" giờ tới đâu rồi
+## AI "sinh cả thế giới" giờ tới đâu rồi
 
-<figure class="small">
-	<a href="{{ site.url }}/images/map3d/aiworld.jpg"><img src="{{ site.url }}/images/map3d/aiworld.jpg" alt="Một thế giới 3D do AI sinh ra, đẹp nhưng mờ ảo và không có đường đi"></a>
-	<figcaption>Đẹp thì đẹp thiệt, nhưng đi vô đâu được.</figcaption>
-</figure>
+{% include figure.html src="map3d/aiworld.jpg" alt="Một thế giới 3D do AI sinh ra, đẹp nhưng mờ ảo và không có đường đi" caption="Đẹp thì đẹp thiệt, nhưng đi vô đâu được." class="small" %}
 
 Tui có coi và thử mấy cái tên đang nổi:
 
@@ -52,7 +46,7 @@ Nhìn demo thì mê, nhưng đem vô game thì vướng ba chuyện. Một là *
 
 Nên tới thời điểm này, tui chỉ dùng mấy cái này làm **ảnh tham khảo hình khối**, giống như nhờ AI phác thảo ý tưởng.
 
-### Chỗ AI giúp thật: hai đầu quy trình
+## Chỗ AI giúp thật: hai đầu quy trình
 
 Cái hay là AI giúp rất nhiều ở **đầu vào** và ở **từng món đồ**.
 
@@ -60,10 +54,7 @@ Cái hay là AI giúp rất nhiều ở **đầu vào** và ở **từng món đ
 
 **Ra địa hình.** Nhờ AI vẽ một tấm **concept sa bàn** (một ảnh nhìn chéo cả map, như nhìn mô hình trên bàn), cho một model đo độ sâu (tui dùng MoGe) đoán chỗ nào cao chỗ nào thấp, rồi chuyển thành bản đồ độ cao thô. Cách này hợp khi concept là một khối đất gọn gàng. Còn map lớn cần đúng tỉ lệ thì tui phác vùng bằng số liệu (khu nào ở đâu, cao bao nhiêu) rồi cho script dựng địa hình. Lúc đó tấm concept chỉ để duyệt cảm giác.
 
-<figure class="small">
-	<a href="{{ site.url }}/images/map3d/concept.jpg"><img src="{{ site.url }}/images/map3d/concept.jpg" alt="Tấm concept sa bàn do AI vẽ: núi đá, thác nước, ruộng bậc thang, làng và sân đấu trên một hòn đảo giữa mây"></a>
-	<figcaption>Tấm concept AI vẽ để duyệt cảm giác. Đẹp vậy chứ không đúng tỉ lệ, nên tui không dùng nó để đo đạc.</figcaption>
-</figure>
+{% include figure.html src="map3d/concept.jpg" alt="Tấm concept sa bàn do AI vẽ: núi đá, thác nước, ruộng bậc thang, làng và sân đấu trên một hòn đảo giữa mây" caption="Tấm concept AI vẽ để duyệt cảm giác. Đẹp vậy chứ không đúng tỉ lệ, nên tui không dùng nó để đo đạc." class="small" %}
 
 **Rải đồ vật.** Phần này tui làm vầy:
 
@@ -76,7 +67,7 @@ Cái hay là AI giúp rất nhiều ở **đầu vào** và ở **từng món đ
 Lượt đầu ra gần 1.000 món đồ trên một map 640 × 640 mét, tui chỉ còn kéo thả chỉnh lại. Sau đó tui thay cây và người bằng model làm riêng, chạy lại một lượt thì lên gần 1.900 món. Khúc cuối là phần rải theo luật: hàng trà chạy theo sườn đồi, rào làng, ao, ruộng bậc thang, thác nước ở mép đảo, đều sinh bằng script nên sửa luật là cả map đổi theo. Chừng đó món mà tự tay đặt từng cái thì mỏi tay lắm.
 
 <figure>
-	<video controls muted playsinline preload="metadata" poster="{{ site.url }}/images/map3d/tour-poster.jpg" width="1280" height="720">
+	<video controls muted playsinline preload="metadata" poster="{{ site.url }}/images/map3d/tour-poster.webp" width="1280" height="720">
 		<source src="{{ site.url }}/images/map3d/tour.mp4" type="video/mp4">
 		Trình duyệt của bạn không phát được video này. <a href="{{ site.url }}/images/map3d/tour.mp4">Tải video về xem</a>.
 	</video>
@@ -89,12 +80,9 @@ Còn với từng món đồ như cái nhà, cây cầu, tảng đá, thì AI l�
 
 Mảng bản đồ độ cao cũng đang có nghiên cứu hay như [MESA](https://mikonvergence-mesa.hf.space/) hay [Terrain Diffusion](https://arxiv.org/abs/2512.08309), gõ chữ ra địa hình. Tui đang để mắt, chưa xài thật.
 
-### Khúc giữa vẫn phải tự tay
+## Khúc giữa vẫn phải tự tay
 
-<figure class="small">
-	<a href="{{ site.url }}/images/map3d/blockout.jpg"><img src="{{ site.url }}/images/map3d/blockout.jpg" alt="Đi thử nhân vật trên bản map khối thô để kiểm tra đường đi và độ dốc"></a>
-	<figcaption>Map khối thô xấu hoắc, nhưng phải đi thử trên đó trước khi trang trí.</figcaption>
-</figure>
+{% include figure.html src="map3d/blockout.jpg" alt="Đi thử nhân vật trên bản map khối thô để kiểm tra đường đi và độ dốc" caption="Map khối thô xấu hoắc, nhưng phải đi thử trên đó trước khi trang trí." class="small" %}
 
 Phần giữa là phần làm nên cái "vui" của map, và AI chưa hiểu được chuyện này.
 
@@ -104,7 +92,7 @@ Phần giữa là phần làm nên cái "vui" của map, và AI chưa hiểu đ�
 
 AI đưa tui bản nháp, nhưng đường đi chỗ nào dốc quá, chỗ nào trống quá, chỗ nào người chơi sẽ lạc, thì phải tự đi mới biết.
 
-### Đừng quên mấy cái máy yếu
+## Đừng quên mấy cái máy yếu
 
 Đây là cái bẫy lớn nhất mà tui thấy ít ai nói: **map đẹp mà máy chạy không nổi thì cũng bằng không.**
 
@@ -112,13 +100,13 @@ Theo hướng dẫn của [Epic](https://dev.epicgames.com/documentation/en-us/u
 
 Mấy game thế giới mở trên điện thoại xử lý bằng vài mẹo quen thuộc: chia map thành ô, chỉ tải ô gần người chơi; vật ở xa thay bằng bản rút gọn hoặc tấm ảnh giả 3D; bóng đổ ở xa tính sẵn hoặc cập nhật thưa. Mà nói gì thì nói, **đo trên máy thật** mới là thước cuối.
 
-### Nhưng cũng đừng tưởng bở
+## Nhưng cũng đừng tưởng bở
 
 AI làm map đang tiến nhanh thiệt, vài tháng lại có model mới. Nhưng demo đẹp khác với đem vô sản phẩm. Trước khi xài cái gì, tui luôn hỏi ba câu: **nặng cỡ nào, giấy phép cho làm gì, và có đi vô chơi được không**. Trả lời được cả ba thì mới đáng bỏ công.
 
 Còn cái tư duy "gõ một câu ra cả game" thì tui nghĩ còn xa. Thứ đang có thật là AI làm phụ tá rất giỏi: phác thảo nhanh, làm đồ nhanh, còn mình giữ phần quyết định cái gì vui, cái gì chạy nổi.
 
-### Vậy bắt đầu từ đâu?
+## Vậy bắt đầu từ đâu?
 
 Nếu bạn muốn thử làm map 3D với AI, tui gợi ý vầy: nhờ AI vẽ một tấm concept sa bàn, cho model đo độ sâu biến nó thành địa hình thô, dựng khối thô rồi tự đi thử trên đó. Xong phần đó rồi mới nhờ AI làm từng món đồ để trang trí. Làm theo thứ tự này thì đỡ phí công hơn nhiều so với lao vô sinh cả thế giới ngay từ đầu.
 

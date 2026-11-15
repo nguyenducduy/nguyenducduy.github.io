@@ -4,27 +4,27 @@ layout: default
 {% assign words = content | strip_html | number_of_words %}
 {% assign minutes = words | divided_by: 220 | at_least: 1 %}
 <div class="read-progress" aria-hidden="true"><span></span></div>
-<article itemscope itemtype="https://schema.org/BlogPosting">
+<article>
     <header class="post-header column">
         {% for cat in page.categories limit: 1 %}
         <a class="post-category" href="{{ site.url }}/categories/#{{ cat | slugify }}">{{ cat }}</a>
         {% endfor %}
-        <h1 class="post-title" itemprop="headline">{{ page.title }}</h1>
+        <h1 class="post-title">{{ page.title }}</h1>
         {% if page.description %}<p class="post-lede">{{ page.description }}</p>{% endif %}
         <p class="post-meta">
-            <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%d/%m/%Y" }}</time>, đọc khoảng {{ minutes }} phút
+            <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%d/%m/%Y" }}</time>, đọc khoảng {{ minutes }} phút
         </p>
     </header>
 
     {% if page.imagefeature %}
     <figure class="post-cover">
         <div class="post-cover-frame">
-            <img src="{{ site.url }}/images/{{ page.imagefeature }}" alt="" width="1344" height="768" fetchpriority="high" data-parallax>
+            {% assign cover_alt = page.cover_alt | default: page.title %}{% include picture.html src=page.imagefeature alt=cover_alt sizes="(min-width: 68rem) 64rem, 100vw" priority=true attrs="data-parallax" %}
         </div>
     </figure>
     {% endif %}
 
-    <div class="prose column" itemprop="articleBody">
+    <div class="prose column">
         {{ content }}
     </div>
 

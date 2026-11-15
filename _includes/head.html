@@ -1,41 +1,120 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <script>document.documentElement.classList.add('js')</script>
-<title>{% if page.title and page.layout != 'home' %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-{% capture desc %}{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}
-<meta name="description" content="{{ desc | strip_html | strip }}">
-{% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
+{% if page.layout == 'home' %}{% capture seo_title %}{{ site.title }} | {{ site.tagline }}{% endcapture %}
+{% elsif page.seo_title %}{% assign seo_title = page.seo_title %}
+{% elsif page.title.size > 50 %}{% assign seo_title = page.title %}
+{% elsif page.title %}{% capture seo_title %}{{ page.title }} | {{ site.title }}{% endcapture %}
+{% else %}{% assign seo_title = site.title %}{% endif %}
+{% if page.title %}{% assign share_title = page.title %}{% else %}{% assign share_title = seo_title %}{% endif %}
+<title>{{ seo_title }}</title>
+{% capture desc %}{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}{% endcapture %}{% assign desc = desc | strip_html | strip_newlines | strip %}
+<meta name="description" content="{{ desc }}">
+{% if page.robots %}<meta name="robots" content="{{ page.robots }}">{% endif %}
+<meta name="author" content="{{ page.author_name | default: site.owner.name }}">
 <meta name="color-scheme" content="light dark">
 <meta name="theme-color" content="#F3F5F2" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0F2523" media="(prefers-color-scheme: dark)">
 
+{% capture canonical %}{{ site.url }}{{ page.url | remove: 'index.html' }}{% endcapture %}
 {% if page.imagefeature %}{% assign share_image = page.imagefeature %}{% else %}{% assign share_image = 'avatar.jpg' %}{% endif %}
+{% capture share_image_url %}{{ site.url }}/images/{{ share_image }}{% endcapture %}
+{% if page.layout == 'post' %}{% assign pub_s = page.date | date: '%s' | plus: 0 %}{% assign mod_s = page.modified | default: page.date | date: '%s' | plus: 0 %}{% if mod_s > pub_s %}{% assign mod_iso = page.modified | date_to_xmlschema %}{% else %}{% assign mod_iso = page.date | date_to_xmlschema %}{% endif %}{% endif %}
+{% capture person_id %}{{ site.url }}/about/#person{% endcapture %}
 
-{% if site.owner.twitter %}<!-- Twitter Cards -->
-<meta name="twitter:card" content="{% if page.imagefeature %}summary_large_image{% else %}summary{% endif %}">
-<meta name="twitter:image" content="{{ site.url }}/images/{{ share_image }}">
-<meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-<meta name="twitter:description" content="{{ desc | strip_html | strip }}">
-<meta name="twitter:creator" content="@{{ site.owner.twitter }}">{% endif %}
+<link rel="canonical" href="{{ canonical }}">
+<link href="{{ site.url }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }}">
 
 <!-- Open Graph -->
 <meta property="og:locale" content="vi_VN">
 <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
-<meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
-<meta property="og:description" content="{{ desc | strip_html | strip }}">
-<meta property="og:url" content="{{ site.url }}{{ page.url }}">
 <meta property="og:site_name" content="{{ site.title }}">
-<meta property="og:image" content="{{ site.url }}/images/{{ share_image }}">
+<meta property="og:title" content="{{ share_title }}">
+<meta property="og:description" content="{{ desc }}">
+<meta property="og:url" content="{{ canonical }}">
+<meta property="og:image" content="{{ share_image_url }}">
+<meta property="og:image:alt" content="{{ page.cover_alt | default: share_title }}">
+{% if page.layout == 'post' %}
+<meta property="article:published_time" content="{{ page.date | date_to_xmlschema }}">
+<meta property="article:modified_time" content="{{ mod_iso }}">
+<meta property="article:author" content="{{ site.url }}/about/">
+{% for cat in page.categories limit: 1 %}<meta property="article:section" content="{{ cat }}">{% endfor %}
+{% for tag in page.tags %}<meta property="article:tag" content="{{ tag }}">
+{% endfor %}{% endif %}
+
+{% if site.owner.twitter %}<!-- Twitter Cards -->
+<meta name="twitter:card" content="{% if page.imagefeature %}summary_large_image{% else %}summary{% endif %}">
+<meta name="twitter:site" content="@{{ site.owner.twitter }}">
+<meta name="twitter:creator" content="@{{ site.owner.twitter }}">
+<meta name="twitter:title" content="{{ share_title }}">
+<meta name="twitter:description" content="{{ desc }}">
+<meta name="twitter:image" content="{{ share_image_url }}">
+<meta name="twitter:image:alt" content="{{ page.cover_alt | default: share_title }}">{% endif %}
 
 {% if site.google_verify %}<meta name="google-site-verification" content="{{ site.google_verify }}">{% endif %}
 {% if site.bing_verify %}<meta name="msvalidate.01" content="{{ site.bing_verify }}">{% endif %}
 
-<link rel="canonical" href="{{ site.url }}{{ page.url | remove: 'index.html' }}">
-<link href="{{ site.url }}/feed.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Feed">
+<!-- Structured data: who writes this site, and what each post is -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": {{ site.url | append: '/#website' | jsonify }},
+      "url": {{ site.url | append: '/' | jsonify }},
+      "name": {{ site.title | jsonify }},
+      "description": {{ site.description | jsonify }},
+      "inLanguage": "vi",
+      "publisher": { "@id": {{ person_id | jsonify }} }
+    },
+    {
+      "@type": "Person",
+      "@id": {{ person_id | jsonify }},
+      "name": {{ site.owner.full_name | jsonify }},
+      "alternateName": ["Duy viber", "Duy coder"],
+      "url": {{ site.url | append: '/about/' | jsonify }},
+      "image": {{ site.url | append: '/images/avatar.jpg' | jsonify }},
+      "jobTitle": {{ site.owner.job_title | jsonify }},
+      "worksFor": { "@type": "Organization", "name": {{ site.owner.works_for | jsonify }}, "url": {{ site.owner.works_for_url | jsonify }} },
+      "knowsAbout": ["Fullstack Development", "DevOps", "AI agents", "Game development", "3D"],
+      "sameAs": [{% if site.owner.github %}{{ 'https://github.com/' | append: site.owner.github | jsonify }}{% endif %}{% if site.owner.github and site.owner.twitter %}, {% endif %}{% if site.owner.twitter %}{{ 'https://twitter.com/' | append: site.owner.twitter | jsonify }}{% endif %}]
+    }{% if page.layout == 'post' %},
+    {
+      "@type": "BlogPosting",
+      "@id": {{ canonical | append: '#article' | jsonify }},
+      "mainEntityOfPage": {{ canonical | jsonify }},
+      "headline": {{ page.title | jsonify }},
+      "description": {{ desc | jsonify }},
+      "image": {{ share_image_url | jsonify }},
+      "datePublished": {{ page.date | date_to_xmlschema | jsonify }},
+      "dateModified": {{ mod_iso | jsonify }},
+      "inLanguage": "vi",
+      "author": { "@id": {{ person_id | jsonify }}, "name": {{ page.author_name | default: site.owner.name | jsonify }} },
+      "publisher": { "@id": {{ person_id | jsonify }} },
+      "isPartOf": { "@id": {{ site.url | append: '/#website' | jsonify }} },
+      {% for cat in page.categories limit: 1 %}"articleSection": {{ cat | jsonify }},{% endfor %}
+      "keywords": {{ page.tags | join: ', ' | jsonify }},
+      "wordCount": {{ content | strip_html | number_of_words }}
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Trang chủ", "item": {{ site.url | append: '/' | jsonify }} }{% for cat in page.categories limit: 1 %},
+        {% capture cat_url %}{{ site.url }}/categories/#{{ cat | slugify }}{% endcapture %}{ "@type": "ListItem", "position": 2, "name": {{ cat | jsonify }}, "item": {{ cat_url | jsonify }} }{% endfor %},
+        { "@type": "ListItem", "position": {% if page.categories.size > 0 %}3{% else %}2{% endif %}, "name": {{ page.title | jsonify }}, "item": {{ canonical | jsonify }} }
+      ]
+    }{% endif %}
+  ]
+}
+</script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap">
+{% capture fonts_css %}https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&display=swap{% endcapture %}
+<!-- fonts load without blocking the first paint; text shows in the fallback face, then swaps -->
+<link rel="preload" as="style" href="{{ fonts_css }}" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="{{ fonts_css }}"></noscript>
 <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
 
 {% if page.mathjax %}

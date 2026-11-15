@@ -2,12 +2,15 @@
 layout: page
 permalink: /about/index.html
 title: I'm Duy
+seo_title: "Về tui: Nguyễn Đức Duy (Duy viber), lập trình viên Fullstack"
+description: "Nguyễn Đức Duy, lập trình viên Fullstack từ 2014: PHP-DevOps ở Điện máy Xanh, khởi nghiệp Teamcrop, 5giay và OLLI với loa thông minh Maika."
 tags: [Duy, Duy Nguyen, Nguyễn Đức Duy]
-imagefeature: fourseasons.jpg
+imagefeature: nguyen-duc-duy.jpg
+cover_alt: Nguyễn Đức Duy
 chart: true
 ---
 <figure>
-  <img src="{{ site.url }}/images/nguyen-duc-duy.jpg" alt="Nguyễn Đức Duy" width="30%">
+  <picture><source type="image/webp" srcset="{{ site.url }}/images/nguyen-duc-duy-400.webp 400w, {{ site.url }}/images/nguyen-duc-duy-800.webp 800w" sizes="(min-width: 44rem) 12rem, 30vw"><img src="{{ site.url }}/images/nguyen-duc-duy.jpg" alt="Nguyễn Đức Duy" width="30%" decoding="async"></picture>
   <figcaption>Nguyễn Đức Duy - Coder</figcaption>
 </figure>
 
@@ -32,8 +35,8 @@ Tui là Duy, tui làm blog này để chia sẻ những kinh nghiệm cũng như
 Khởi điểm của tui cũng như bao người khác, thậm chí không bằng những bạn bây giờ, cũng đi học chuyên ngành công nghệ thông tin tại [NIIT](https://www.niit.com/vietnam/), tốt nghiệp hệ Cao Đẳng thời bấy giờ thì cũng tạm được, học được 1 chút kiến thức những công nghệ Microsoft như VB, ASP, Excel, Access, MSSQL, ... nhưng cơ bản là không có hứng thú lắm và quyết định học thêm ngôn ngữ lập trình [PHP](https://www.php.net/) thì thấy là khá "dính" với nó. Quyết định tầm sư học đạo với thầy [Võ Duy Tuấn](https://vn.linkedin.com/in/voduytuan) và cùng thầy đi chinh chiến tại [Điện máy Xanh](https://www.dienmayxanh.com/), khởi đầu cho chuỗi ngày ăn dằm nằm dề với code.
 
 <figure class="half">
-	<a href="{{ site.url }}/images/about/dienmayxanh/4_members.jpg"><img src="{{ site.url }}/images/about/dienmayxanh/4_members.jpg"></a>
-	<a href="{{ site.url }}/images/about/dienmayxanh/all_members.jpg"><img src="{{ site.url }}/images/about/dienmayxanh/all_members.jpg"></a>
+	<a href="{{ site.url }}/images/about/dienmayxanh/4_members.jpg">{% include picture.html src="about/dienmayxanh/4_members.jpg" alt="Bốn thành viên team kỹ thuật Điện máy Xanh năm 2014" sizes="(min-width: 44rem) 20rem, 100vw" %}</a>
+	<a href="{{ site.url }}/images/about/dienmayxanh/all_members.jpg">{% include picture.html src="about/dienmayxanh/all_members.jpg" alt="Cả team Điện máy Xanh năm 2014" sizes="(min-width: 44rem) 20rem, 100vw" %}</a>
 	<figcaption>Chinh chiến tại dienmay.com năm 2014 (Bây giờ là dienmayxanh.com)</figcaption>
 </figure>
 
@@ -43,13 +46,13 @@ Tui làm việc tại [Điện máy Xanh](https://www.dienmayxanh.com/) với ro
 Và cái gì tới rồi cũng sẽ tới, thầy tui có lối đi riêng nên đành giã từ [Điện máy Xanh](https://www.dienmayxanh.com/), khởi nghiệp với [Teamcrop](https://www.teamcrop.com/) - Nền tảng quản lý chuỗi bán lẻ trên web. Lúc này thì càng áp lực hơn vì phải tự setup server vật lý, rồi vác nó đặt lên VDC Datacenter, thiết lập VPN, CI/CD Jenkins, ... không có ai cứu cánh, phải tự lực cánh sinh nhưng cũng rất là thú vị. Khởi nghiệp lun là 1 thứ gì đó vô cùng hấp dẫn và chông gai.
 
 <figure class="half">
-	<a href="{{ site.url }}/images/about/teamcrop/working_together.png"><img src="{{ site.url }}/images/about/teamcrop/working_together.png"></a>
-	<a href="{{ site.url }}/images/about/teamcrop/all_members.jpg"><img src="{{ site.url }}/images/about/teamcrop/all_members.jpg"></a>
+	<a href="{{ site.url }}/images/about/teamcrop/working_together.png">{% include picture.html src="about/teamcrop/working_together.png" alt="Team Teamcrop làm việc chung năm 2015" sizes="(min-width: 44rem) 20rem, 100vw" %}</a>
+	<a href="{{ site.url }}/images/about/teamcrop/all_members.jpg">{% include picture.html src="about/teamcrop/all_members.jpg" alt="Các thành viên Teamcrop năm 2015" sizes="(min-width: 44rem) 20rem, 100vw" %}</a>
 </figure>
 <figure class="third">
-	<a href="{{ site.url }}/images/about/teamcrop/IMG_0128.JPG"><img src="{{ site.url }}/images/about/teamcrop/IMG_0128.JPG"></a>
-	<a href="{{ site.url }}/images/about/teamcrop/IMG_0129.JPG"><img src="{{ site.url }}/images/about/teamcrop/IMG_0129.JPG"></a>
-	<a href="{{ site.url }}/images/about/teamcrop/IMG_0130.JPG"><img src="{{ site.url }}/images/about/teamcrop/IMG_0130.JPG"></a>
+	<a href="{{ site.url }}/images/about/teamcrop/IMG_0128.JPG">{% include picture.html src="about/teamcrop/IMG_0128.JPG" alt="Những ngày khởi nghiệp ở Teamcrop năm 2015" sizes="(min-width: 44rem) 13rem, 100vw" %}</a>
+	<a href="{{ site.url }}/images/about/teamcrop/IMG_0129.JPG">{% include picture.html src="about/teamcrop/IMG_0129.JPG" alt="Những ngày khởi nghiệp ở Teamcrop năm 2015" sizes="(min-width: 44rem) 13rem, 100vw" %}</a>
+	<a href="{{ site.url }}/images/about/teamcrop/IMG_0130.JPG">{% include picture.html src="about/teamcrop/IMG_0130.JPG" alt="Những ngày khởi nghiệp ở Teamcrop năm 2015" sizes="(min-width: 44rem) 13rem, 100vw" %}</a>
 	<figcaption>Khởi nghiệp cùng thầy tại Spiral (teamcrop.com) năm 2015. Vất vả nhưng được cái nó vui.</figcaption>
 </figure>
 
@@ -60,19 +63,19 @@ Lúc này setup server xong thì ngồi chơi cưỡi ngựa xem hoa, rảnh r�
 Năm 2016, quản trị server hoài cũng nhàn nên tui quyết định bay lượn ở vùng trời khác, tui gia nhập [5giay.vn](https://www.5giay.vn/) lúc đó là sàn rao vặt thời kỳ đầu dưới dạng forum với lượng truy cập rất cao (bây giờ thì sụp rồi), muốn nâng cấp từ vBulltetin lên Xenforo và build 1 trang rao vặt đúng nghĩa. Project đã hoàn thành nhưng vì nhiều lý do không thể duy trì và phát triển được (không có nhân lực, thuê sinh viên làm lại nên bây giờ thành cái web xấu xí nhất quả đất). Tui đành chia tay 5giay, tui đi phỏng vấn và đậu 1 số cty như Mainspring (hiện sở hữu bởi ByteDance - Cty mẹ của ứng dụng TikTok), Tiki.vn, KynaForKid, Siêu Việt Group (Chủ sở hữu 1 số website tìm việc), HDWebsoft, ... nhưng phong cách làm việc và dự án ở đây có lẽ không phù hợp với tui và cuối cùng tui tìm thấy [OLLI](https://olli.vn/): với ý tưởng điên rồ và táo bạo thời điểm đó, tui gia nhập và tự nâng cấp bản thân mình cho đến bây giờ.
 
 <figure class="third">
-	<a href="{{ site.url }}/images/about/olli/IMG_0008.JPG"><img src="{{ site.url }}/images/about/olli/IMG_0008.JPG"></a>
-	<a href="{{ site.url }}/images/about/olli/IMG_0109.jpg"><img src="{{ site.url }}/images/about/olli/IMG_0109.jpg"></a>
-	<a href="{{ site.url }}/images/about/olli/IMG_0020.JPG"><img src="{{ site.url }}/images/about/olli/IMG_0020.JPG"></a>
+	<a href="{{ site.url }}/images/about/olli/IMG_0008.JPG">{% include picture.html src="about/olli/IMG_0008.JPG" alt="Những thành viên đầu tiên của OLLI tại Lutaco Tower" sizes="(min-width: 44rem) 13rem, 100vw" %}</a>
+	<a href="{{ site.url }}/images/about/olli/IMG_0109.jpg">{% include picture.html src="about/olli/IMG_0109.jpg" alt="Những thành viên đầu tiên của OLLI tại Lutaco Tower" sizes="(min-width: 44rem) 13rem, 100vw" %}</a>
+	<a href="{{ site.url }}/images/about/olli/IMG_0020.JPG">{% include picture.html src="about/olli/IMG_0020.JPG" alt="Những thành viên đầu tiên của OLLI tại Lutaco Tower" sizes="(min-width: 44rem) 13rem, 100vw" %}</a>
 	<figcaption>OLLI - Những thành viên thuở sơ khai, làm việc tại Lutaco Tower</figcaption>
 </figure>
 <figure class="third">
-	<a href="{{ site.url }}/images/about/olli/IMG_4651.JPG"><img src="{{ site.url }}/images/about/olli/IMG_4651.JPG"></a>
-	<a href="{{ site.url }}/images/about/olli/IMG_4949.JPG"><img src="{{ site.url }}/images/about/olli/IMG_4949.JPG"></a>
-	<a href="{{ site.url }}/images/about/olli/IMG_4819.JPG"><img src="{{ site.url }}/images/about/olli/IMG_4819.JPG"></a>
+	<a href="{{ site.url }}/images/about/olli/IMG_4651.JPG">{% include picture.html src="about/olli/IMG_4651.JPG" alt="Đoàn OLLI đi triển lãm CES Asia ở Thượng Hải" sizes="(min-width: 44rem) 13rem, 100vw" %}</a>
+	<a href="{{ site.url }}/images/about/olli/IMG_4949.JPG">{% include picture.html src="about/olli/IMG_4949.JPG" alt="Đoàn OLLI đi triển lãm CES Asia ở Thượng Hải" sizes="(min-width: 44rem) 13rem, 100vw" %}</a>
+	<a href="{{ site.url }}/images/about/olli/IMG_4819.JPG">{% include picture.html src="about/olli/IMG_4819.JPG" alt="Đoàn OLLI đi triển lãm CES Asia ở Thượng Hải" sizes="(min-width: 44rem) 13rem, 100vw" %}</a>
 	<figcaption>OLLI - CES ASIA Shanghai trip (Đi dự triển lãm công nghệ CES tại Thượng Hải, TQ. Tiện đi du lịch lun)</figcaption>
 </figure>
 <figure>
-	<a href="{{ site.url }}/images/about/olli/IMG_0120.JPG"><img src="{{ site.url }}/images/about/olli/IMG_0120.JPG"></a>
+	<a href="{{ site.url }}/images/about/olli/IMG_0120.JPG">{% include picture.html src="about/olli/IMG_0120.JPG" alt="Chỗ ngồi làm việc của Duy ở OLLI" sizes="(min-width: 44rem) 40rem, 100vw" %}</a>
 	<figcaption>Vâng. Tui ngồi đây và tui có thể làm những gì tui thích. (Thực ra là tui ngồi đối diện sếp tui =.=", còn ảnh ngồi ngay chỗ tui đứng chụp) </figcaption>
 </figure>
 

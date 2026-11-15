@@ -1,17 +1,24 @@
-title:            "I'm Duy"
-description:      "A Viber"
+title:            "Duy viber"
+tagline:          "Chuyện nghề lập trình web và AI"
+description:      "Blog của Nguyễn Đức Duy (Duy viber): hơn 10 năm làm web, từ PHP, DevOps tới Fullstack và AI agent, kể bằng chuyện nghề có thật."
 logo:             logo.png
 disqus_shortname: ndduy
 share:            true
 dropcap:			true
-# Change url to your domain. Leave localhost server or blank when working locally.
-# or use the hint from http://jekyllrb.com/docs/github-pages/ to keep this the same
-# whether working locally or remotely. Start Jekyll with: jekyll serve --baseurl ''
-url:        	  ''
+# Absolute site URL, used for canonical, Open Graph, sitemap and feed.
+# `jekyll serve` replaces it with localhost automatically.
+url:              "https://nguyenducduy.github.io"
+
+plugins:
+  - jekyll-sitemap
 
 # Owner/author information
 owner:
   name:           Duy viber
+  full_name:      Nguyễn Đức Duy
+  job_title:      Fullstack Developer
+  works_for:      OLLI
+  works_for_url:  https://olli.vn
   avatar:         logo.png
   email:          nguyenducduy.it@gmail.com
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
@@ -26,7 +33,7 @@ owner:
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   UA-37431723-7
-google_verify:
+google_verify:      d_caIvpXpkevOupEX4V0Ix9Z-BYwd1Hce2mXI7na378
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:
 

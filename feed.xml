@@ -2,7 +2,7 @@
 layout: null
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="vi">
 {% assign add_protocol = false %}
 {% assign protocol = site.url | split: '/' | first %}
 {% if site.url != '' and protocol != 'http:' and protocol != 'https:' %}
@@ -12,6 +12,7 @@ layout: null
   {% assign site_url = site.url %}
 {% endif %}
 <title type="text">{{ site.title }}</title>
+<subtitle type="text">{{ site.description }}</subtitle>
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="{{ site_url }}/feed.xml" />
 <link rel="alternate" type="text/html" href="{{ site_url }}/" />
@@ -26,6 +27,7 @@ layout: null
 
 <entry>
   <title type="html"><![CDATA[{{ post.title | cdata_escape }}]]></title>
+  {% if post.description %}<summary type="text">{{ post.description | xml_escape }}</summary>{% endif %}
   <link rel="alternate" type="text/html" href="{% if post.link %}{{ post.link }}{% else %}{{ site_url }}{{ post.url }}{% endif %}"/>
   <id>{{ site_url }}{{ post.id }}</id>
   {% if post.modified %}<published>{{ post.date | date_to_xmlschema }}</published>
@@ -44,7 +46,7 @@ layout: null
   {% else %}
     {{ post.content | xml_escape }}
   {% endif %}
-  &lt;p&gt;&lt;a href=&quot;{{ site_url }}{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt; was originally published by {{ site.owner.name }} at &lt;a href=&quot;{{ site_url }}&quot;&gt;{{ site.title }}&lt;/a&gt; on {{ post.date | date: "%B %d, %Y" }}.&lt;/p&gt;</content>
+  &lt;p&gt;&lt;a href=&quot;{{ site_url }}{{ post.url }}&quot;&gt;{{ post.title }}&lt;/a&gt; đăng lần đầu trên &lt;a href=&quot;{{ site_url }}&quot;&gt;{{ site.title }}&lt;/a&gt; ngày {{ post.date | date: "%d/%m/%Y" }}.&lt;/p&gt;</content>
 </entry>
 {% endfor %}
 </feed>

@@ -1,7 +1,7 @@
 <a class="skip-link" href="#main">Bỏ qua, tới nội dung</a>
 <header class="site-header wrap">
     <a class="wordmark" href="{{ site.url }}/">
-        <img src="{{ site.url }}/images/avatar.jpg" alt="" width="72" height="72">
+        {% include picture.html src="avatar.jpg" alt="" sizes="36px" priority=true %}
         {{ site.owner.name }}
     </a>
     <nav class="site-nav" aria-label="Điều hướng chính">

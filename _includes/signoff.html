@@ -1,6 +1,6 @@
 {% assign author_name = page.author_name | default: site.owner.name %}
 <aside class="author" aria-label="Tác giả">
-    <img src="{{ site.url }}/images/avatar.jpg" alt="Ảnh của {{ author_name }}" width="128" height="128" loading="lazy">
+    {% capture avatar_alt %}Ảnh của {{ author_name }}{% endcapture %}{% include picture.html src="avatar.jpg" alt=avatar_alt sizes="64px" %}
     <div>
         <p class="author-name">{{ author_name }}</p>
         <p class="author-bio">Hơn 10 năm làm web, từ PHP tới DevOps rồi Fullstack. <a href="{{ site.url }}/about">Đọc chuyện của tui</a></p>

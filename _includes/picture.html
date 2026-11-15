@@ -1,0 +1,8 @@
+{%- comment -%}
+Responsive image. Params: src (path under images/), alt, sizes, class, priority (true = LCP image: no lazy, high fetch priority), attrs (extra raw attributes).
+WebP variants and sizes come from _data/images.json (made by _tools/make_images.py). Output stays on one line so it is safe inside Markdown.
+{%- endcomment -%}
+{%- assign im = site.data.images[include.src] -%}
+{%- assign base = include.src | split: '.' | first -%}
+{%- capture srcset -%}{%- for w in im.widths -%}{{ site.url }}/images/{{ base }}-{{ w }}.webp {{ w }}w{%- unless forloop.last -%}, {% endunless -%}{%- endfor -%}{%- endcapture -%}
+<picture>{% if im %}<source type="image/webp" srcset="{{ srcset }}" sizes="{{ include.sizes | default: '100vw' }}">{% endif %}<img src="{{ site.url }}/images/{{ include.src }}" alt="{{ include.alt | escape }}"{% if im %} width="{{ im.w }}" height="{{ im.h }}"{% endif %}{% if include.class %} class="{{ include.class }}"{% endif %}{% if include.priority %} fetchpriority="high"{% else %} loading="lazy"{% endif %} decoding="async"{% if include.attrs %} {{ include.attrs }}{% endif %}></picture>

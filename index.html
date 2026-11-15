@@ -45,7 +45,7 @@ description: "Blog của Duy viber: chuyện nghề lập trình web và con đ�
                 <p class="entry-excerpt">{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html | truncatewords: 40 }}{% endif %}</p>
                 <p class="entry-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d/%m/%Y" }}</time>, đọc khoảng {{ minutes }} phút</p>
             </div>
-            {% if post.imagefeature %}<img class="entry-thumb" src="{{ site.url }}/images/{{ post.imagefeature }}" alt="" width="304" height="228" loading="lazy">{% endif %}
+            {% if post.imagefeature %}{% include picture.html src=post.imagefeature alt="" class="entry-thumb" sizes="(max-width: 34rem) 100vw, 152px" %}{% endif %}
         </a>
     </article>
     {% else %}
