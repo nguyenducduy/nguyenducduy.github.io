@@ -1,51 +1,10 @@
-<footer class="notepad-site-footer">
-    <div class="copyright">
-        <section>Bản quyền thuộc về <a href="{{ site.url }}/about">{{ site.owner.name }}</a> &copy; {{ site.time |
-            date: '%Y' }} &bull;</section>
-    </div>
-    <div class="social-icons">
-
-        {% if site.owner.twitter %}
-        <a href="http://twitter.com/{{ site.owner.twitter }}">
-            <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
-                <i class="fa fa-twitter fa-stack-1x"></i>
-            </span>
-        </a>
-        {% endif %}
-        {% if site.owner.google_plus %}
-        <a href="{{ site.owner.google_plus }}">
-            <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
-                <i class="fa fa-google-plus fa-stack-1x"></i>
-            </span>
-        </a>
-        {% endif %}
-        {% if site.owner.instagram %}
-        <a href="http://instagram.com/{{ site.owner.instagram }}">
-            <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
-                <i class="fa fa-instagram fa-stack-1x"></i>
-            </span>
-        </a>
-        {% endif %}
-        {% if site.owner.github %}
-        <a href="http://github.com/{{ site.owner.github }}">
-            <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
-                <i class="fa fa-github fa-stack-1x"></i>
-            </span>
-        </a>
-        {% endif %}
-        {% if site.owner.facebook %}
-        <a href="http://facebook.com/{{ site.owner.facebook }}">
-            <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x fa-inverse"></i>
-                <i class="fa fa-facebook fa-stack-1x"></i>
-            </span>
-        </a>
-        {% endif %}
-    </div>
-
-    <div class="cf"></div>
+<footer class="site-footer wrap">
+    <p>&copy; {{ site.time | date: '%Y' }} <a href="{{ site.url }}/about">{{ site.owner.name }}</a></p>
+    <ul>
+        {% if site.owner.github %}<li><a href="https://github.com/{{ site.owner.github }}">GitHub</a></li>{% endif %}
+        {% if site.owner.twitter %}<li><a href="https://twitter.com/{{ site.owner.twitter }}">Twitter</a></li>{% endif %}
+        {% if site.owner.facebook %}<li><a href="https://facebook.com/{{ site.owner.facebook }}">Facebook</a></li>{% endif %}
+        {% if site.owner.instagram %}<li><a href="https://instagram.com/{{ site.owner.instagram }}">Instagram</a></li>{% endif %}
+        <li><a href="{{ site.url }}/feed.xml">RSS</a></li>
+    </ul>
 </footer>

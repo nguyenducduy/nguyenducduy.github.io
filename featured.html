@@ -2,23 +2,23 @@
 layout: page
 permalink: /featured/
 title: Bài viết
-description: "An archive of posts sorted by date."
+description: "Tất cả bài viết trên blog của Duy viber, xếp theo năm."
 ---
-{% assign featuredcount = '0' %}
-<ul class="post-list">
-  {% for post in site.posts %}
-  {% if post.featured %}
-  {% assign featuredcount = featuredcount | plus:'1' %}
-  <li>
-    <article><i class="fa fa-star-half-o"></i> <a href="{{ site.url }}{{ post.url }}">{{ post.title }} <span
-          class="entry-date"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y"
-            }}</time></span></a></article>
-  </li>
+<div class="archive">
+{% for post in site.posts %}
+  {% assign year = post.date | date: "%Y" %}
+  {% if year != current_year %}
+    {% unless forloop.first %}</ul>{% endunless %}
+    <h2 id="nam-{{ year }}">{{ year }}</h2>
+    <ul>
+    {% assign current_year = year %}
   {% endif %}
-  {% endfor %}
-</ul>
-{% if featuredcount == '0' %}
-<div class="notepad-page-title row">
-  <h1>No posts has been featured yet</h1>
+  <li>
+    <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d/%m/%Y" }}</time>
+    <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+  </li>
+  {% if forloop.last %}</ul>{% endif %}
+{% else %}
+  <p class="empty-state">Chưa có bài nào. Tui đang viết, các bạn quay lại sau nha.</p>
+{% endfor %}
 </div>
-{% endif %}

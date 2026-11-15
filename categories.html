@@ -1,41 +1,26 @@
 ---
 layout: page
 title: Chủ đề
-permalink: /categories/index.html
-title: Chủ đề
-tags: [Categories]
-description: "An archive of posts sorted by categories."
-
+permalink: /categories/
+redirect_from: /categories/index.html
+description: "Bài viết trên blog của Duy viber, xếp theo chủ đề."
 ---
+<div class="archive">
+  <ul class="term-list">
+    {% for cat in site.categories %}
+    <li><a href="#{{ cat[0] | slugify }}">{{ cat[0] }}</a><span>{{ cat[1].size }}</span></li>
+    {% endfor %}
+  </ul>
 
-<ul class="tag-box inline">
-  {% assign tags_list = site.categories %}
-  {% if tags_list.first[0] == null %}
-  {% for tag in tags_list %}
-  <li><a href="#{{ tag }}">{{ tag | capitalize }} <span>{{ site.tags[tag].size }}</span></a></li>
+  {% for cat in site.categories %}
+  <h2 id="{{ cat[0] | slugify }}">{{ cat[0] }}</h2>
+  <ul>
+    {% for post in cat[1] %}
+    <li>
+      <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d/%m/%Y" }}</time>
+      <a href="{{ site.url }}{{ post.url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
   {% endfor %}
-  {% else %}
-  {% for tag in tags_list %}
-  <li><a href="#{{ tag[0] }}">{{ tag[0] | capitalize }} <span>{{ tag[1].size }}</span></a></li>
-  {% endfor %}
-  {% endif %}
-  {% assign tags_list = nil %}
-</ul>
-
-{% for tag in site.categories %}
-<h2 id="{{ tag[0] }}">{{ tag[0] | capitalize }}</h2>
-<ul class="post-list">
-  {% assign pages_list = tag[1] %}
-  {% for post in pages_list %}
-  {% if post.title != null %}
-  {% if group == null or group == post.group %}
-  <li><a href="{{ site.url }}{{ post.url }}">{{ post.title }}<span class="entry-date"><time
-          datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date: "%B %d, %Y"
-          }}</time></a></li>
-  {% endif %}
-  {% endif %}
-  {% endfor %}
-  {% assign pages_list = nil %}
-  {% assign group = nil %}
-</ul>
-{% endfor %}
+</div>

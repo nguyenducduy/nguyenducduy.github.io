@@ -1,97 +1,54 @@
 ---
 layout: home
-title: BLOG
-description: "The personal blog of Hossain Mohd. Faysal, a doctoral candidate in Electrical Engineering at University of Pennsylvania."
-headline: An Engineer's Diary
-tags: [Hossain, Mohd, Faysal, electrical, engineering, blog, university, pennsylvania, doha, Qatar]
+description: "Blog của Duy viber: chuyện nghề lập trình web và con đường trở thành Fullstack Developer, kể bằng trải nghiệm thật."
 ---
-{% if site.paginate %}
-	{% for post in paginator.posts %}
-    <article class="notepad-index-post post row">
-        <div class="small-12 medium-3 large-2 columns datetime">
-            <span class="notepad-post-meta">
-                <time datetime="{{ post.date | date_to_xmlschema }}">
-                    <span class="day">
-                        {{ post.date | date: "%d" }}
-                    </span>
-                    <span class="month-year">
-                        {{ post.date | date: "%B %Y" }}
-                    </span>
-                </time>
-            </span>
-        </div>
-        <div class="small-12 medium-9 large-10 columns">
-            <header class="notepad-post-header">
-                <h3 class="notepad-post-title">
-                    <a href="{{ site.url }}{{ post.url }}">
-                        {{ post.title }}
-                    </a>
-                </h3>
-            </header>
-            <section class="notepad-post-excerpt">
-                <p>{{ post.content | strip_html | truncatewords:40 }}</p>
-            </section>
-            
-                <div class="notepad-index-post-tags">
-                {% for tag in post.categories %}<a href="{{ site.url }}/categories/index.html#{{ post.categories | cgi_encode }}" title="Other posts from the {{ tag | capitalize }} category">{{ tag | capitalize }}</a>{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}
-                    
-                </div>
-            
-        </div>
-    </article>
-	{% endfor %}
-    <nav class="pagination" role="navigation">
-    {% if paginator.previous_page %}
-	    {% if paginator.previous_page == 1 %}
-	    <a class="newer-posts" href="{{ site.url }}"><i class="fa fa-chevron-left"></i> Newer</a>
-	    {% else %}
-	    <a class="newer-posts" href="{{ site.url }}/page{{ paginator.previous_page }}"><i class="fa fa-chevron-left"></i> Newer</a>
-	    {% endif %}
-	{% else %}
-    <span class="newer-posts faded"><i class="fa fa-chevron-left"></i> Newer</span>
-    {% endif %}
+<section class="hero wrap" aria-labelledby="hero-title">
+    <h1 class="hero-title" id="hero-title">Tui là Duy. Hơn mười năm làm web, giờ ngồi kể lại.</h1>
+    <p class="hero-lede">Blog này ghi lại chuyện nghề của một lập trình viên Fullstack: từ hồi học PHP mà bị giao canh server, tới lúc làm loa thông minh Maika ở OLLI.</p>
+</section>
 
-    
-    <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
-    	{% if paginator.next_page %} 
-        <a class="older-posts" href="{{ site.url }}/page{{ paginator.next_page }}/">Older <i class="fa fa-chevron-right"></i></a>
-    	{% else %}
-    	<span class="older-posts faded">Older <i class="fa fa-chevron-right"></i></span>
-    	{% endif %}
-	</nav>
-{% else %}
-	{% for post in site.posts %}
-    <article class="notepad-index-post post row">
-        <div class="small-12 medium-3 large-2 columns datetime">
-            <span class="notepad-post-meta">
-                <time datetime="{{ post.date | date_to_xmlschema }}">
-                    <span class="day">
-                        {{ post.date | date: "%d" }}
-                    </span>
-                    <span class="month-year">
-                        {{ post.date | date: "%B %Y" }}
-                    </span>
-                </time>
-            </span>
-        </div>
-        <div class="small-12 medium-9 large-10 columns">
-            <header class="notepad-post-header">
-                <h3 class="notepad-post-title">
-                    <a href="{{ site.url }}{{ post.url }}">
-                        {{ post.title }}
-                    </a>
-                </h3>
-            </header>
-            <section class="notepad-post-excerpt">
-                <p>{{ post.content | strip_html | truncatewords:100 }}</p>
-            </section>
-            
-                <div class="notepad-index-post-tags">
-                {% for tag in post.categories %}<a href="{{ site.url }}/categories/index.html#{{ post.categories | cgi_encode }}" title="Other posts from the {{ tag | capitalize }} category">{{ tag | capitalize }}</a>{% unless forloop.last %}&nbsp;{% endunless %}{% endfor %}
-                    
-                </div>
-            
-        </div>
+<section class="route-block wrap" aria-label="Chặng đường đi làm của tui">
+    <ol class="route">
+        <li style="--i:0">
+            <span class="route-year">2014</span>
+            <span class="route-place">Điện máy Xanh</span>
+            <span class="route-note">Học PHP, vô làm lại đi canh server Linux</span>
+        </li>
+        <li style="--i:1">
+            <span class="route-year">2015</span>
+            <span class="route-place">Teamcrop</span>
+            <span class="route-note">Khởi nghiệp, tự vác server lên datacenter</span>
+        </li>
+        <li style="--i:2">
+            <span class="route-year">2016</span>
+            <span class="route-place">5giay.vn</span>
+            <span class="route-note">Làm lại sàn rao vặt từ forum</span>
+        </li>
+        <li class="is-now" style="--i:3">
+            <span class="route-year">Hiện tại</span>
+            <span class="route-place">OLLI</span>
+            <span class="route-note">Lo mảng nội dung cho loa Maika</span>
+        </li>
+    </ol>
+    <a class="route-more" href="{{ site.url }}/about">Đọc đầy đủ chuyện của tui</a>
+</section>
+
+<section class="entries wrap" aria-labelledby="latest">
+    <h2 class="section-title" id="latest">Bài viết mới</h2>
+    {% for post in site.posts %}
+    {% assign words = post.content | strip_html | number_of_words %}
+    {% assign minutes = words | divided_by: 220 | at_least: 1 %}
+    <article class="entry">
+        <a class="entry-link" href="{{ site.url }}{{ post.url }}">
+            <div>
+                <h3 class="entry-title">{{ post.title }}</h3>
+                <p class="entry-excerpt">{% if post.description %}{{ post.description }}{% else %}{{ post.excerpt | strip_html | truncatewords: 40 }}{% endif %}</p>
+                <p class="entry-meta"><time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%d/%m/%Y" }}</time>, đọc khoảng {{ minutes }} phút</p>
+            </div>
+            {% if post.imagefeature %}<img class="entry-thumb" src="{{ site.url }}/images/{{ post.imagefeature }}" alt="" width="304" height="228" loading="lazy">{% endif %}
+        </a>
     </article>
-	{% endfor %}  
-{% endif %}
+    {% else %}
+    <p class="empty-state">Chưa có bài nào. Tui đang viết, các bạn quay lại sau nha.</p>
+    {% endfor %}
+</section>

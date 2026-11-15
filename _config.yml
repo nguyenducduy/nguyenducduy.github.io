@@ -1,5 +1,5 @@
 title:            "I'm Duy"
-description:      "A Coder"
+description:      "A Viber"
 logo:             logo.png
 disqus_shortname: ndduy
 share:            true
@@ -11,7 +11,7 @@ url:        	  ''
 
 # Owner/author information
 owner:
-  name:           Duy coder
+  name:           Duy viber
   avatar:         logo.png
   email:          nguyenducduy.it@gmail.com
   # Use the coder's toolbox at http://coderstoolbox.net/string/#!encoding=xml&action=encode&charset=us_ascii to encode your description into XML string
@@ -154,4 +154,4 @@ prose:
 
 
 include: [".htaccess"]
-exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+exclude: ["lib", "config.rb", "Gemfile", "Capfile", "Gemfile.lock", "config", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules", "vendor", ".bundle"]

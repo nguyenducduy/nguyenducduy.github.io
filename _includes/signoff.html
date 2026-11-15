@@ -1,20 +1,8 @@
-<div class="notepad-author-info">
-    <div class="row">
-        <section class="notepad-post-author small-12 columns">
-
-            <img src="{{site.url}}/images/{{ site.owner.avatar }}" class="notepad-post-author-avatar"
-                alt="{{ site.owner.name }}'s photo">
-
-
-            <span class="author-label">Tác giả</span>
-            <h1>{{ site.owner.name }}</h1>
-
-
-            <p><a href="mailto:{{ site.owner.email }}" class="author-website">{{ site.owner.email }}</a></p>
-
-
-            <p>{{ site.owner.description }}</p>
-
-        </section>
+{% assign author_name = page.author_name | default: site.owner.name %}
+<aside class="author" aria-label="Tác giả">
+    <img src="{{ site.url }}/images/avatar.jpg" alt="Ảnh của {{ author_name }}" width="128" height="128" loading="lazy">
+    <div>
+        <p class="author-name">{{ author_name }}</p>
+        <p class="author-bio">Hơn 10 năm làm web, từ PHP tới DevOps rồi Fullstack. <a href="{{ site.url }}/about">Đọc chuyện của tui</a></p>
     </div>
-</div>
+</aside>

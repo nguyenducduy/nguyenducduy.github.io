@@ -1,0 +1,19 @@
+<a class="skip-link" href="#main">Bỏ qua, tới nội dung</a>
+<header class="site-header wrap">
+    <a class="wordmark" href="{{ site.url }}/">
+        <img src="{{ site.url }}/images/avatar.jpg" alt="" width="72" height="72">
+        {{ site.owner.name }}
+    </a>
+    <nav class="site-nav" aria-label="Điều hướng chính">
+        <ul>
+            {% for link in site.links %}{% if link.url != '/' %}
+            {% if link.external %}
+            <li><a href="{{ link.url }}">{{ link.title }}</a></li>
+            {% else %}
+            {% assign link_path = link.url | append: '/' %}
+            <li><a href="{{ site.url }}{{ link.url }}"{% if page.url == link.url or page.url contains link_path %} aria-current="page"{% endif %}>{{ link.title }}</a></li>
+            {% endif %}
+            {% endif %}{% endfor %}
+        </ul>
+    </nav>
+</header>
