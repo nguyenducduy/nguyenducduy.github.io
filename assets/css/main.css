@@ -592,10 +592,10 @@ a { color: var(--link); }
 
 .prose figure img { margin-inline: auto; }
 
-/* <img width="30%"> in older posts keeps its intended size */
-.prose figure img:not([width]) { width: 100%; }
+/* images fill the column and never exceed it; a percentage width (<img width="30%">) keeps its intended size */
+.prose figure img:not([width$="%"]) { width: 100%; }
 
-.prose figure.small img { max-width: 34rem; }
+.prose figure.small img { max-width: min(100%, 34rem); }
 
 .prose figure video {
   display: block;
