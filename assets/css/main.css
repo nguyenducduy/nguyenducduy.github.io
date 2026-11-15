@@ -591,6 +591,15 @@ a { color: var(--link); }
 
 .prose figure.small img { max-width: 34rem; }
 
+.prose figure video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 4px;
+  background: var(--paper-2);
+}
+
 .prose figcaption {
   margin-top: .625rem;
   font-family: var(--sans);

@@ -8,7 +8,7 @@ chart: true
 ---
 <figure>
   <img src="{{ site.url }}/images/nguyen-duc-duy.jpg" alt="Nguyễn Đức Duy" width="30%">
-  <figcaption>Nguyễn Đức Duy - Viber</figcaption>
+  <figcaption>Nguyễn Đức Duy - Coder</figcaption>
 </figure>
 
 {% assign total_words = 0 %}
